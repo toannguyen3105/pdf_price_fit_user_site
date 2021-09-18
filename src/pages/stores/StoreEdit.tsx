@@ -18,7 +18,7 @@ const RoleEdit: React.FC<Props> = ({ match }) => {
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    await axios.put(`stores/${id}`, {
+    await axios.put(`/stores/${id}`, {
       cookies,
       csrf_token,
     });
@@ -28,7 +28,7 @@ const RoleEdit: React.FC<Props> = ({ match }) => {
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get(`stores/${id}`);
+      const { data } = await axios.get(`/stores/${id}`);
       setName(data?.data?.store_name);
       setCookies(data?.data?.cookies);
       setCsrfToken(data?.data?.csrf_token);

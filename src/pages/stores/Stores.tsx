@@ -10,7 +10,7 @@ const Stores = () => {
   useEffect(() => {
     (async () => {
       try {
-        const { data } = await axios.get(`stores`);
+        const { data } = await axios.get(`/stores`);
 
         setStores(data?.data);
       } catch (e) {}
