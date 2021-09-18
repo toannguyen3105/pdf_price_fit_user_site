@@ -19,7 +19,7 @@ const ProductEdit: React.FC<Props> = ({ match }) => {
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    await axios.put(`item/${id}`, {
+    await axios.put(`/item/${id}`, {
       min_price: parseFloat(min_price),
       max_price: parseFloat(max_price),
     });
@@ -29,7 +29,7 @@ const ProductEdit: React.FC<Props> = ({ match }) => {
 
   useEffect(() => {
     (async () => {
-      const { data } = await axios.get(`item/${id}`);
+      const { data } = await axios.get(`/item/${id}`);
       setName(data?.data?.name);
       setPrice(data?.data?.price);
       setMinPrice(data?.data?.min_price);

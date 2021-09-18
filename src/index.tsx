@@ -7,7 +7,7 @@ import axios from "axios";
 import { configureStore } from "./redux/configurationStore";
 import { Provider } from "react-redux";
 
-axios.defaults.baseURL = "http://127.0.0.1:5000";
+axios.defaults.baseURL = "https://price-fit.toannguyen3105.com/api";
 axios.defaults.headers.common = {
   Authorization: `Bearer ${window.localStorage.getItem("access_token")}`,
 };

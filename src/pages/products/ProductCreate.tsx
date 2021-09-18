@@ -40,7 +40,7 @@ const ProductCreate = () => {
   const submit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    await axios.post("item", {
+    await axios.post("/item", {
       goods_id: goodsId,
       name: name,
       price: parseFloat(price),
