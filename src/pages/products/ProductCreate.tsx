@@ -17,6 +17,7 @@ const ProductCreate = () => {
     description: "",
     cookies: "",
     csrf_token: "",
+    status: 1,
   };
 
   const stores: Store[] = [
@@ -122,6 +123,7 @@ const ProductCreate = () => {
           <select
             className="form-control"
             onChange={(e) => setStoreId(e.target.value)}
+            value={storeId}
           >
             {stores.map((s: Store) => {
               return (

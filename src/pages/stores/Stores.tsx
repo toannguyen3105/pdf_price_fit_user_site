@@ -26,6 +26,7 @@ const Stores = () => {
               <th scope="col">#</th>
               <th scope="col">Store name</th>
               <th scope="col">Description</th>
+              <th scope="col">Status</th>
               <th scope="col">Name</th>
               <th scope="col">Action</th>
             </tr>
@@ -37,6 +38,7 @@ const Stores = () => {
                   <td>{store.id}</td>
                   <td>{store.store_name}</td>
                   <td>{store.description}</td>
+                  <td>{store.status === 1 ? "Active" : "Inactive"}</td>
                   <td>
                     <div className="mr-2 btn-group">
                       <Link
